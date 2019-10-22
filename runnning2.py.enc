@@ -1,0 +1,30 @@
+import time
+import RPi.GPIO as GPIO
+
+
+GPIO.setmode(GPIO.BCM)
+GPIO.setwarnings(False)
+GPIO.setup(5,GPIO.OUT)
+GPIO.setup(6,GPIO.OUT)
+GPIO.setup(13,GPIO.OUT)
+GPIO.setup(19,GPIO.OUT)
+list=[5,6,13,19]
+
+
+try:
+    while True:
+        
+        for num in range(len(list),1):
+            GPIO.OUTPUT(len[num],GPIO.HIGH)
+            time.sleep(0.05)
+            GPIO.OUTPUT(len[num],GPIO.LOW)
+            time.sleep(0.05)
+        
+        
+    GPIO.OUTPUT(5,GPIO.LOW)
+    GPIO.OUTPUT(6,GPIO.LOW)
+    GPIO.OUTPUT(13,GPIO.LOW)
+    GPIO.OUTPUT(19,GPIO.LOW)
+    
+finally:
+    GPIO.cleanup()

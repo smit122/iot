@@ -1,0 +1,14 @@
+import RPi.GPIO as g
+import time
+g.setmode(g.BCM)
+g.setwarnings(False)
+g.setup(5,g.OUT)
+g.setup(6,g.OUT)
+g.setup(13,g.OUT)
+list=[5,6,13]
+for num in range(len(list)):
+    g.output(list[num],g.HIGH)
+    time.sleep(2)
+    g.output(list[num],g.LOW)
+    time.sleep(2)
+g.cleanup()
