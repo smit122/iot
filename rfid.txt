@@ -1,0 +1,25 @@
+import Rpi GPIO as g 
+from mfrc522 import simpleMFRC522
+rader=simpleMFRC522
+g.setwornings(False) 
+try:
+text=input('new data:')
+print("now place your tag to write ")
+reader.write(text)
+print("written")
+finally:
+g.cleanup()
+
+
+
+
+import Rpi GPIO as g 
+from mfrc522 import simpleMFRC522
+rader=simpleMFRC522
+ 
+try:
+id,text=reader.read()
+print(id)
+print(text)
+finally:
+g.cleanup()
